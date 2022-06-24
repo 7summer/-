@@ -6,17 +6,17 @@ void InputToFile(SportMeeting *S)
     int n;
     School *temp;
     Project *temp2;
-    f=fopen("F:\\excise\\è¿åŠ¨ä¼š.txt","w");  //å‚¨å­˜ä½ç½®æ ¹æ®è‡ªèº«æƒ…å†µè€Œå®š
-    fprintf(f,"å­¦æ ¡%dæ‰€\tç”·å­é¡¹ç›®%dé¡¹\tå¥³å­é¡¹ç›®%dé¡¹\n",S->n,S->man_num,S->women_num);
+    f=fopen("C:\\ÔË¶¯»á.txt","w");
+    fprintf(f,"Ñ§Ğ£%dËù\tÄĞ×ÓÏîÄ¿%dÏî\tÅ®×ÓÏîÄ¿%dÏî\n",S->n,S->man_num,S->women_num);
     for(i=1;i<=S->n;i++)
     {
         temp=&(S->school[i]);
-        fprintf(f,"(%d)%s\té¡¹ç›®æ€»åˆ†:%d\tç”·å­é¡¹ç›®æ€»åˆ†:%d\tå¥³å­é¡¹ç›®æ€»åˆ†:%d\n",temp->number,temp->school_name,temp->sum,temp->man_sum,temp->women_sum);
+        fprintf(f,"(%d)%s\tÏîÄ¿×Ü·Ö:%d\tÄĞ×ÓÏîÄ¿×Ü·Ö:%d\tÅ®×ÓÏîÄ¿×Ü·Ö:%d\n",temp->number,temp->school_name,temp->sum,temp->man_sum,temp->women_sum);
     }
     for(i=1;i<=S->man_num+S->women_num;i++)
     {
         temp2=&(S->project[i]);
-        fprintf(f,"(%d)%s å–å‰%då è¯¥é¡¹ç›®æ˜¯å¦å·²ç»è¿›è¡Œ(%d)\t",i,temp2->project_name,temp2->mark,temp2->carryout);
+        fprintf(f,"(%d)%s È¡Ç°%dÃû ¸ÃÏîÄ¿ÊÇ·ñÒÑ¾­½øĞĞ(%d)\t",i,temp2->project_name,temp2->mark,temp2->carryout);
         if(!temp2->carryout)
         {
             fprintf(f,"\n");
@@ -31,7 +31,7 @@ void InputToFile(SportMeeting *S)
         fprintf(f,"\n");
     }
     fclose(f);
-    printf("æˆåŠŸå½•å…¥åˆ°æ–‡ä»¶\n");
+    printf("³É¹¦Â¼Èëµ½ÎÄ¼ş\n");
 }
 void OuputFromFile(SportMeeting *S)
 {
@@ -41,12 +41,12 @@ void OuputFromFile(SportMeeting *S)
     ProjectCredits *temp3;
     int i,j;
     int n;
-    f=fopen("F:\\excise\\è¿åŠ¨ä¼š.txt","r");
-    fscanf(f,"å­¦æ ¡%dæ‰€\tç”·å­é¡¹ç›®%dé¡¹\tå¥³å­é¡¹ç›®%dé¡¹\n",&S->n,&S->man_num,&S->women_num);
+    f=fopen("C:\\ÔË¶¯»á.txt","r");
+    fscanf(f,"Ñ§Ğ£%dËù\tÄĞ×ÓÏîÄ¿%dÏî\tÅ®×ÓÏîÄ¿%dÏî\n",&S->n,&S->man_num,&S->women_num);
     for(i=1;i<=S->n;i++)
     {
         temp1=&(S->school[i]);
-        fscanf(f,"(%d)%s\té¡¹ç›®æ€»åˆ†:%d\tç”·å­é¡¹ç›®æ€»åˆ†:%d\tå¥³å­é¡¹ç›®æ€»åˆ†:%d\n",&temp1->number,temp1->school_name,&temp1->sum,&temp1->man_sum,&temp1->women_sum);
+        fscanf(f,"(%d)%s\tÏîÄ¿×Ü·Ö:%d\tÄĞ×ÓÏîÄ¿×Ü·Ö:%d\tÅ®×ÓÏîÄ¿×Ü·Ö:%d\n",&temp1->number,temp1->school_name,&temp1->sum,&temp1->man_sum,&temp1->women_sum);
         for(j=1;j<=S->man_num+S->women_num;j++)
         {
             temp1->high_standings[j]=0;
@@ -55,7 +55,7 @@ void OuputFromFile(SportMeeting *S)
     for(i=1;i<=S->man_num+S->women_num;i++)
     {
         temp2=&(S->project[i]);
-        fscanf(f,"(%*d)%s å–å‰%då è¯¥é¡¹ç›®æ˜¯å¦å·²ç»è¿›è¡Œ(%d)\t",temp2->project_name,&temp2->mark,&temp2->carryout);
+        fscanf(f,"(%*d)%s È¡Ç°%dÃû ¸ÃÏîÄ¿ÊÇ·ñÒÑ¾­½øĞĞ(%d)\t",temp2->project_name,&temp2->mark,&temp2->carryout);
         if(temp2->carryout)
         {
             for(j=1;j<=temp2->mark;j++)
@@ -69,5 +69,5 @@ void OuputFromFile(SportMeeting *S)
         fscanf(f,"\n");
     }
     fclose(f);
-    printf("å·²ä»æ–‡ä»¶ä¸­æˆåŠŸè¯»å–æ•°æ®!\n");
+    printf("ÒÑ´ÓÎÄ¼şÖĞ³É¹¦¶ÁÈ¡Êı¾İ!\n");
 }
