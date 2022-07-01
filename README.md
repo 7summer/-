@@ -49,7 +49,7 @@ Introduction to project features
 
 ##
 
-## examine-data
+## Examine-Data
    - *Examine-Name-Project*
       - We will ask whether it is a male or female project
       - We will search project data for an item that maches the user's data and return to the location where the project is located
