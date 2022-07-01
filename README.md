@@ -10,7 +10,7 @@ Introduction to project features
    * [Input-Credit-Data](#Input-Credit-Data)
 <!--te-->
 
-## Input-School-Project-Data
+# Input-School-Project-Data
    - you need to use this function to record school and project data when you use this system for the first time
    
    - *In this function* you can select Input-School-Data or Input-Project-Data  
@@ -26,13 +26,13 @@ Introduction to project features
       - What's more you will need to enter the position of project
       - Considering that man and woman have common project, we will ask you if this project is both male and female. We will show the project number if this project is both male and female
 
-## Input-Credit-Data
+# Input-Credit-Data
    - *In main function*
       - We will show the project that have not yet been credited 
       - We can Input-Credit-Data according to the number of project or the name of project
       - Depend on user's input, the system will return the number of project in  function or function
 
-## Examine-Data
+# Examine-Data
    ### *Examine-Name-Project*
       - We will ask whether it is a male or female project
       - We will search project data for an item that maches the user data and return to the location where the project is located
