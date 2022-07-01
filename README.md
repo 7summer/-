@@ -31,13 +31,13 @@ Introduction to project features
    - *In main function*
       - We will show the project that have not yet been credited
       - We can Input-Credit-Data according to the number of project or the name of project
-      - Depend on user's input, the system will return the number of project in [Examine-Project-Data](#Examine-Data) function
+      - Depend on user's input, the system will return the number of project in [Examine-Project-Data](#examine-data) function
     
    - *In this function*
        - We will show the number ,name ,position and participating school of project
        - We can Input-Credit-data according to the number of school or the name of school
-       - Depend on user's input, the system will return the number of school in [Examine-School-Data](#Examine-Data) function
-       - Depend on user's input, we will determine whether the school number entered by the user is reasonable in the [Examine-Participating-School](#Examine-Data) function
+       - Depend on user's input, the system will return the number of school in [Examine-School-Data](#examine-data) function
+       - Depend on user's input, we will determine whether the school number entered by the user is reasonable in the [Examine-Participating-School](#examine-data) function
        - The user will be re-entered the point if the user enters a point that is greater than the previous credit
 
 ## Read-Data-From-File
