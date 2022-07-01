@@ -6,9 +6,9 @@ Introduction to project features
 ================================
 
 <!--ts-->
-   * [Input-School-Project-Data](## Input-School-Project-Data)
-   * [Input-Credit-Data](## Input-Credit-Data)
-<!--ts-->
+   * [Input-School-Project-Data](##Input-School-Project-Data)
+   * [Input-Credit-Data](##Input-Credit-Data)
+<!--te-->
 
 ## Input-School-Project-Data
    - you need to use this function to record school and project data when you use this system for the first time
