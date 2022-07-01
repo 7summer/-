@@ -6,12 +6,28 @@ Introduction to project features
 ================================
 
 <!--ts-->
-   *
+   * [Input-School-Project-Data](##Input-School-Project-Data)
+   
 <!--ts-->
 
 ## Input-School-Project-Data
-   - 1. *In this function* you can select Input-School-Data or Input-Project-Data  
+   - you need to use this function to record school and project data when you use this system for the first time
+   
+   - *In this function* you can select Input-School-Data or Input-Project-Data  
 
-   - 2. *Input-School-Data* you will need to enter the name of the school according to the number provided by the system  
+   - *Input-School-Data* 
+      - you need to enter the number of school firstly
+      - you will need to enter the name of the school according to the number provided by the system  
 
-   - 3. *Input-Project-Data* 
+   - *Input-Project-Data*
+      - First we ask about the number of Man-Project and Woman-Project
+      - we need to input Man-Project-Data firstly
+      - you will need to enter the name of the school according to the number provided by the system
+      - What's more you will need to enter the position of project
+      - Considering that man and woman have common project, we will ask you if this project is both male and female. We will show the project number if this project is both male and female
+
+## Input-Credit-Data
+   - *In main function*
+      - We will show the project that have not yet been credited 
+      - We can Input-Credit-Data according to the number of project or the name of project
+      - 
