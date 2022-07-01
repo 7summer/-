@@ -33,6 +33,8 @@ Introduction to project features
       - Depend on user's input, the system will return the number of project in [Examine-Name-Project](#examine-name-project) function or function
 
 ## Examine-Data
-   ### *Examine-Name-Project*
+   - *Examine-Name-Project*
       - We will ask whether it is a male or female project
       - We will search project data for an item that maches the user data and return to the location where the project is located
+   - *Examine-Number-Project*
+      - We will check that the number of project entered by the user is reasonable
