@@ -8,6 +8,11 @@ Introduction to project features
 <!--ts-->
    * [Input-School-Project-Data](#Input-School-Project-Data)
    * [Input-Credit-Data](#Input-Credit-Data)
+   * [Read-Data-From-File](#Read-Data-From-File)
+   * [Input-Data-To-File](#Input-Data-To-File)
+   * [Inquiry-Data](#Inquiry-Data)
+   * [Modify-Data](#Modify-Data)
+   * [Find-School-Sorting](#Find-School-Sorting)
 <!--te-->
 
 ## Input-School-Project-Data
@@ -47,7 +52,11 @@ Introduction to project features
    - Please remember to save your data when you modify data
    - you can not to save data to file if you don't want to save current data
 
-##
+## Inquiry-Data
+
+## Modify-Data
+
+## Find-School-Sorting
 
 ## Examine-Data
    - *Examine-Name-Project*
