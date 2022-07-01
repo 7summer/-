@@ -24,7 +24,7 @@ Introduction to project features
       - we need to input Man-Project-Data firstly
       - you will need to enter the name of the school according to the number provided by the system
       - What's more you will need to enter the position of project
-      - Considering that man and woman have common project, we will ask you if this project is both male and female. We will show the project number if this project is both male and female
+      - Considering that man and woman have common project, we will ask you if this project is both male and female. We will show the project number in Woman-Project if this project is both male and female
 
 ## Input-Credit-Data
    - *In main function*
