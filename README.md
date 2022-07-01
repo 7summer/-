@@ -31,16 +31,23 @@ Introduction to project features
    - *In main function*
       - We will show the project that have not yet been credited
       - We can Input-Credit-Data according to the number of project or the name of project
-      - Depend on user's input, the system will return the number of project in [Examine-Data](#examine-data) function
+      - Depend on user's input, the system will return the number of project in [Examine-Data](#Examine-Data) function
     
    - *In this function*
        - We will show the number ,name ,position and participating school of project
-       - 
+       - We can Input-Credit-data according to the number of school or the name of school
+       - Depend on user's input, the system will return the number of school in function
 
 ## Examine-Data
    - *Examine-Name-Project*
       - We will ask whether it is a male or female project
-      - We will search project data for an item that maches the user data and return to the location where the project is located
+      - We will search project data for an item that maches the user's data and return to the location where the project is located
+      
    - *Examine-Number-Project*
       - We will check that the number of project entered by the user is reasonable
-   - **
+      
+   - *Examine-Name-School*
+      - We will search project data for an school that maches the user's data and return to the location where the project is located
+      
+   - *Examine-Number-School*
+      - We will search school data for an shool that maches the user's data and return to the locating where the school is located
