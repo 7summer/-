@@ -7,7 +7,7 @@ Introduction to project features
 
 <!--ts-->
    * [Input-School-Project-Data](##Input-School-Project-Data)
-   
+   * [Input-Credit-Data](##Input-Credit-Data)
 <!--ts-->
 
 ## Input-School-Project-Data
@@ -30,4 +30,9 @@ Introduction to project features
    - *In main function*
       - We will show the project that have not yet been credited 
       - We can Input-Credit-Data according to the number of project or the name of project
-      - 
+      - Depend on user's input, the system will return the number of project in [Exame-Name-Project](##Examine-Data\###*Examine-Name-Project*) function or function
+
+## Examine-Data
+   ### *Examine-Name-Project*
+      - We will ask whether it is a male or female project
+      - We will search project data for an item that maches the user data and return to the location where the project is located
