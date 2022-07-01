@@ -24,16 +24,17 @@ Introduction to project features
       - we need to input Man-Project-Data firstly
       - you will need to enter the name of the school according to the number provided by the system
       - What's more you will need to enter the position of project
-      - Considering that man and woman have common project, we will ask you if this project is both male and female. We will show the project number in Woman-Project if this project is both male and female
+      - Lastly, you need to enter the participating school name for the project also
+      - Considering that man and woman have common project, we will ask you if this project is both male and female. We will show the project number in Woman-Project if this project is both male and female. Also consider whether the participating school are the same
 
 ## Input-Credit-Data
    - *In main function*
-      - We will show the project that have not yet been credited 
+      - We will show the project that have not yet been credited
       - We can Input-Credit-Data according to the number of project or the name of project
       - Depend on user's input, the system will return the number of project in [Examine-Data](#examine-data) function
     
    - *In this function*
-       - We will show the number,name and position of project
+       - We will show the number ,name ,position and participating school of project
        - 
 
 ## Examine-Data
