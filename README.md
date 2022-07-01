@@ -6,8 +6,8 @@ Introduction to project features
 ================================
 
 <!--ts-->
-   * [Input-School-Project-Data](##Input-School-Project-Data)
-   * [Input-Credit-Data](##Input-Credit-Data)
+   * [Input-School-Project-Data](## Input-School-Project-Data)
+   * [Input-Credit-Data](## Input-Credit-Data)
 <!--ts-->
 
 ## Input-School-Project-Data
