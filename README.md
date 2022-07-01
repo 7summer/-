@@ -30,7 +30,7 @@ Introduction to project features
    - *In main function*
       - We will show the project that have not yet been credited 
       - We can Input-Credit-Data according to the number of project or the name of project
-      - Depend on user's input, the system will return the number of project in [Examine-Name-Project](#examine-name-project) function or function
+      - Depend on user's input, the system will return the number of project in [Examine-Data](#Examine-Data) function
 
 ## Examine-Data
    - *Examine-Name-Project*
