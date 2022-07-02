@@ -10,7 +10,7 @@ int main()
     int choice1,choice2,choice3;
     do
     {
-        printf("    1.录入学校、项目名称\n\
+        printf("    1.录入学校、项目数据\n\
     2.录入积分数据\n\
     3.从电脑中读数据\n\
     4.将数据存储到电脑\n\
@@ -28,6 +28,12 @@ int main()
             case 2:
                 do
                 {
+                    printf("还未进行的项目\n");
+                    for(i=1;i<=S.man_num+S.women_num;i++)
+                    {
+                        temp2=&(S.project[i]);
+                        if(!temp2->carryout) printf("(%d)%s\n",i,temp2->project_name);
+                    }
                     printf("    1.按项目名称输入积分\n\
     2.按项目编号输入积分\n\
     3.退出\n");
@@ -63,8 +69,8 @@ int main()
             case 5:
                 do
                 {
-                    printf("    1.查看全部学校的数据\n\
-    2.查看全部项目的数据\n\
+                    printf("    1.查看全部学校的分数数据\n\
+    2.查看全部项目的获奖数据\n\
     3.查看学校的详细数据\n\
     4.查看项目的详细数据\n\
     5.退出\n");
@@ -123,7 +129,8 @@ int main()
     3.修改项目名次\n\
     4.修改项目进行情况\n\
     5.修改项目积分\n\
-    6.退出\n");
+    6.修改项目参赛学校\n\
+    7.退出\n");
                     printf("请输入:");
                     scanf("%d%*c",&choice2);
                     switch (choice2)
@@ -200,13 +207,32 @@ int main()
                             else printf("(%d)%s还没开始!\n",pos,temp2->project_name);
                             break;
                         case 6:
+                            printf("请输入项目编号:");
+                            again6:scanf("%d%*c",&pos);
+                            if(pos>S.man_num+S.women_num)
+                            {
+                                printf("输入错误!\n");
+                                printf("请重新输入:");
+                                goto again6;
+                            }
+                            temp2=&(S.project[pos]);
+                            if(temp2->carryout)
+                            {
+                                printf("(%d)%s已录入积分,请修改项目进行情况后,再修改项目参赛学校,再对项目重新录入积分\n",pos,temp2->project_name);
+                            }
+                            else
+                            {
+                                InputParticipatingSchool(&S,pos);
+                            }
+                            break;
+                        case 7:
                             printf("谢谢!\n");
                             break;
                         default:
                             printf("输入有误!\n");
                             break;
                     }
-                } while (choice2!=6);
+                } while (choice2!=7);
                 break;
             case 7:
                 do

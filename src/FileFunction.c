@@ -3,6 +3,7 @@ void InputToFile(SportMeeting *S)
 {
     FILE *f;
     int i,j;
+    int school_pos;
     int n;
     School *temp;
     Project *temp2;
@@ -12,6 +13,26 @@ void InputToFile(SportMeeting *S)
     {
         temp=&(S->school[i]);
         fprintf(f,"(%d)%s\t项目总分:%d\t男子项目总分:%d\t女子项目总分:%d\n",temp->number,temp->school_name,temp->sum,temp->man_sum,temp->women_sum);
+    }
+    for(i=1;i<=S->man_num+S->women_num;i++)
+    {
+        temp2=&(S->project[i]);
+        fprintf(f,"(%d)%s 是否已录入参赛学校(%d)\t",i,temp2->project_name,temp2->num);
+        if(temp2->num)
+        {
+            fprintf(f,"参赛学校:");
+            for(j=1;j<=temp2->num;j++)
+            {
+                school_pos=ExamineSchool_pos(S,temp2->ParticipatingSchool[j]);
+                temp=&(S->school[school_pos]);
+                fprintf(f,"(%d)%s\t",temp->number,temp->school_name);
+            }
+            fprintf(f,"\n");
+        }
+        else
+        {
+            fprintf(f,"\n");
+        }
     }
     for(i=1;i<=S->man_num+S->women_num;i++)
     {
@@ -39,6 +60,7 @@ void OuputFromFile(SportMeeting *S)
     School *temp1;
     Project *temp2;
     ProjectCredits *temp3;
+    int school_number;
     int i,j;
     int n;
     f=fopen("C:\\运动会.txt","r");
@@ -55,7 +77,21 @@ void OuputFromFile(SportMeeting *S)
     for(i=1;i<=S->man_num+S->women_num;i++)
     {
         temp2=&(S->project[i]);
-        fscanf(f,"(%*d)%s 取前%d名 该项目是否已经进行(%d)\t",temp2->project_name,&temp2->mark,&temp2->carryout);
+        fscanf(f,"(%*d)%s 是否已录入参赛学校(%d)\t",temp2->project_name,&temp2->num);
+        if(temp2->num)
+        {
+            fscanf(f,"参赛学校:");
+            for(j=1;j<=temp2->num;j++)
+            {
+                fscanf(f,"(%d)%*s\t",&school_number);
+                temp2->ParticipatingSchool[i]=school_number;
+            }
+        }
+    }
+    for(i=1;i<=S->man_num+S->women_num;i++)
+    {
+        temp2=&(S->project[i]);
+        fscanf(f,"(%*d)%*s 取前%d名 该项目是否已经进行(%d)\t",&temp2->mark,&temp2->carryout);
         if(temp2->carryout)
         {
             for(j=1;j<=temp2->mark;j++)

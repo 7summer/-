@@ -12,6 +12,7 @@ typedef struct
     int mark; //ÓÃÀ´¼ÇÂ¼¸ÃÏîÄ¿ÊÇÈ¡Ç°Îå»¹ÊÇÇ°Èı
     int carryout; //ÅĞ¶Ï¸ÃÏîÄ¿ÊÇ·ñ½øĞĞ
     ProjectCredits AwardSchools[6]; //ÓÃÀ´¼ÇÂ¼ÄÄĞ©Ñ§Ğ£»ñ½±¡¢»ñµÃ¶àÉÙ»ı·Ö
+    int ParticipatingSchool[20]; //¼ÇÂ¼²ÎÈüÑ§Ğ£µÄ±àºÅ
 }Project;
 typedef struct
 {
@@ -40,6 +41,7 @@ int ExamineNumberProject(SportMeeting *S); //ÔÚº¯ÊıÀïÊäÈëÏîÄ¿±àºÅ£¬È»ºó²éÕÒ¸ÃÏîÄ
 int ExamineNameSchool(SportMeeting *S);
 int ExamineNumberSchool(SportMeeting *S);
 int ExamineSchool_pos(SportMeeting *S,int n); //²éÕÒÑ§Ğ£±àºÅÎªnµÄÎ»ÖÃ,²¢·µ»ØÕâ¸öÎ»ÖÃ
+int ExamineParticipatingSchool(SportMeeting *S,int number,int pos); //number´ú±íÑ§Ğ£±àºÅ pos´ú±íÏîÄ¿±àºÅ
 void ModifySchoolName(SportMeeting *S,int school_pos); //ĞŞ¸Äschool_posÎ»ÖÃµÄÑ§Ğ£Ãû³Æ
 void ModifyProject(SportMeeting *S,int project_pos,int choice); //ĞŞ¸ÄÏîÄ¿µÄÃû³Æ¡¢ÏîÄ¿½øĞĞÇé¿ö choice(2ĞŞ¸ÄÏîÄ¿Ãû³Æ 3ĞŞ¸ÄÏîÄ¿Ãû´Î 4ĞŞ¸ÄÏîÄ¿½øĞĞÇé¿ö)
 void NumberSort(SportMeeting *S); //Ê¹ÓÃÃ°ÅİÅÅĞò

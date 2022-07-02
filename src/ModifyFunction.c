@@ -27,7 +27,7 @@ void ModifyProject(SportMeeting *S,int project_pos,int choice)
     else if(choice==3)
     {
         printf("原来项目数据:(%d)%s 取前%d名\n",project_pos,temp->project_name,temp->mark);
-        printf("请输入项目名次:(3/5)");
+        printf("请输入项目名次:(3/5):");
         again1:scanf("%d%*c",&mark);
         if(mark!=3 && mark!=5)
         {
@@ -85,6 +85,5 @@ void ModifyProject(SportMeeting *S,int project_pos,int choice)
         }
         temp->carryout=flag;
         printf("修改成功!\n");
-
     }
 }

@@ -58,7 +58,7 @@ int ExamineNumberSchool(SportMeeting *S)
     printf("ÇëÊäÈëÑ§Ð£±àºÅ:");
     scanf("%d%*c",&n);
     n=ExamineSchool_pos(S,n);
-    return n;  
+    return n;
 }
 /*
 int ExamineNumberSchool(SportMeeting *S)
@@ -79,4 +79,17 @@ int ExamineSchool_pos(SportMeeting *S,int n)
         if(S->school[i].number==n) return i;
     }
     return 0;  
+}
+int ExamineParticipatingSchool(SportMeeting *S,int school_pos,int project_pos)
+{
+    int i;
+    int number;
+    Project *temp;
+    temp=&(S->project[project_pos]);
+    number=S->school[school_pos].number;
+    for(i=1;i<=temp->num;i++)
+    {
+        if(temp->ParticipatingSchool[i]==number) return 1;
+    }
+    return 0;
 }

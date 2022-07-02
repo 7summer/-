@@ -25,7 +25,7 @@ void SumSort(SportMeeting *S)
     int temp=S->n;
     int i,j,k;
     d=(int*)malloc(sizeof(int)*(S->n));
-    while(temp) //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½d[]
+    while(temp) //¼ÆËãÔöÁ¿d[]
     {
         d[t++]=temp/2;
         temp /= 2;
