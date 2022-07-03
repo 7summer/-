@@ -177,6 +177,11 @@ void FindSchool(SportMeeting *S,int school_pos)
                                 if(!temp2->carryout) printf("(%d)%s还没有进行\n",project_pos,temp2->project_name);
                                 else printf("%s在(%d)%s中获得%d积分\n",temp->school_name,project_pos,temp2->project_name,temp->high_standings[project_pos]);
                             }
+                            else
+                            {
+                                temp2=&(S->project[project_pos]);
+                                printf("(%d)%s没有参加(%d)%s\n",temp->number,temp->school_name,project_pos,temp2->project_name);
+                            }
                             break;
                         case 2:
                             project_pos=ExamineNumberProject(S);
@@ -186,6 +191,11 @@ void FindSchool(SportMeeting *S,int school_pos)
                                 temp2=&(S->project[project_pos]);
                                 if(!temp2->carryout) printf("(%d)%s还没有进行\n",project_pos,temp2->project_name);
                                 else printf("%s在(%d)%s中获得%d积分\n",temp->school_name,project_pos,temp2->project_name,temp->high_standings[project_pos]);
+                            }
+                            else
+                            {
+                                temp2=&(S->project[project_pos]);
+                                printf("(%d)%s没有参加(%d)%s\n",temp->number,temp->school_name,project_pos,temp2->project_name);
                             }
                             break;
                         case 3:
