@@ -7,7 +7,7 @@ void InputToFile(SportMeeting *S)
     int n;
     School *temp;
     Project *temp2;
-    f=fopen("C:\\运动会.txt","w");
+    f=fopen("F:\\运动会.txt","w");
     fprintf(f,"学校%d所\t男子项目%d项\t女子项目%d项\n",S->n,S->man_num,S->women_num);
     for(i=1;i<=S->n;i++)
     {
@@ -63,7 +63,7 @@ void OuputFromFile(SportMeeting *S)
     int school_number;
     int i,j;
     int n;
-    f=fopen("C:\\运动会.txt","r");
+    f=fopen("F:\\运动会.txt","r");
     fscanf(f,"学校%d所\t男子项目%d项\t女子项目%d项\n",&S->n,&S->man_num,&S->women_num);
     for(i=1;i<=S->n;i++)
     {
@@ -84,7 +84,7 @@ void OuputFromFile(SportMeeting *S)
             for(j=1;j<=temp2->num;j++)
             {
                 fscanf(f,"(%d)%*s\t",&school_number);
-                temp2->ParticipatingSchool[i]=school_number;
+                temp2->ParticipatingSchool[j]=school_number;
             }
         }
     }

@@ -8,6 +8,7 @@ int main()
     int i,j;
     int n;
     int choice1,choice2,choice3;
+    S.n=S.man_num=S.women_num=0;
     do
     {
         printf("    1.录入学校、项目数据\n\

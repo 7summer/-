@@ -60,16 +60,7 @@ int ExamineNumberSchool(SportMeeting *S)
     n=ExamineSchool_pos(S,n);
     return n;
 }
-/*
-int ExamineNumberSchool(SportMeeting *S)
-{
-    int n;
-    printf("«Î ‰»Î—ß–£±‡∫≈:");
-    scanf("%d%*c",&n);
-    if(n<1 || n>S->n) return 0;
-    return n;
-}
-*/
+
 int ExamineSchool_pos(SportMeeting *S,int n)
 {
     if(n<1 || n>S->n) return 0;

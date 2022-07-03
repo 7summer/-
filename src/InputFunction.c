@@ -6,7 +6,6 @@ void InputData(SportMeeting *S)
     int mark;
     int choice,choice2;
     int project_pos;
-    S->n=S->man_num=S->women_num=0;
     do
     {
         printf("    1.录入学校数据\n\
@@ -125,6 +124,7 @@ void InputData(SportMeeting *S)
                         }
                     }
                 }
+                break;
             case 3:
                 do
                 {
@@ -132,26 +132,39 @@ void InputData(SportMeeting *S)
     2.输入项目名称录入\n\
     3.退出\n");
                     printf("请选择:");
-                    scanf("%d",&choice2);
+                    scanf("%d%*c",&choice2);
                     switch (choice2)
                     {
                         case 1:
                             project_pos=ExamineNumberProject(S);
+                            if(!project_pos)
+                            {
+                                printf("输入有误!\n");
+                                continue;
+                            }
                             InputParticipatingSchool(S,project_pos);
                             break;
                         case 2:
                             project_pos=ExamineNameProject(S);
+                            if(!project_pos)
+                            {
+                                printf("输入有误!\n");
+                                continue;
+                            }
                             InputParticipatingSchool(S,project_pos);
                             break;
                         case 3:
                             printf("谢谢!\n");
+                            break;
                         default:
                             printf("输入错误!\n");
                             break;
                     }
                 } while (choice2!=3);
+                break;
             case 4:
-                break; 
+                printf("谢谢!\n");
+                break;
             default:
                 printf("输入错误!\n");
                 break;
@@ -188,6 +201,13 @@ void InputCredit(SportMeeting *S,int project_pos)
         temp->mark=S->n;
     }
     printf("(%d)%s项目取前%d名\n",project_pos,temp->project_name,temp->mark);
+    printf("参赛队伍:");
+    for(i=1;i<=temp->num;i++)
+    {
+        school_pos=ExamineSchool_pos(S,temp->ParticipatingSchool[i]);
+        temp2=&(S->school[school_pos]);
+        printf("(%d)%s\t",temp2->number,temp2->school_name);
+    }
     for(i=1;i<=temp->mark;i++)
     {
         printf("现在录入第%d名的积分数据\n",i);
@@ -201,7 +221,7 @@ void InputCredit(SportMeeting *S,int project_pos)
             {
                 case 1:
                     school_pos=ExamineNameSchool(S);
-                    if(!school_pos && ExamineParticipatingSchool(S,school_pos,project_pos))
+                    if(!school_pos || !ExamineParticipatingSchool(S,school_pos,project_pos))
                     {
                         choice=0;
                         printf("输入的学校名称有误!(可能不在参赛名单里)\n");
@@ -209,7 +229,7 @@ void InputCredit(SportMeeting *S,int project_pos)
                     break;
                 case 2:
                     school_pos=ExamineNumberSchool(S);
-                    if(!school_pos && ExamineParticipatingSchool(S,school_pos,project_pos))
+                    if(!school_pos || !ExamineParticipatingSchool(S,school_pos,project_pos))
                     {
                         choice=0;
                         printf("输入的学校编号有误!(可能不在参赛名单里)\n");
@@ -248,6 +268,7 @@ void InputParticipatingSchool(SportMeeting *S,int project_pos)
     int school_pos;
     int school_number;
     Project *temp;
+    School *temp2;
     temp=&(S->project[project_pos]);
     printf("(%d)%s有多少个参赛学校:",project_pos,temp->project_name);
     scanf("%d",&temp->num);
@@ -272,7 +293,17 @@ void InputParticipatingSchool(SportMeeting *S,int project_pos)
                     printf("输入错误!\n");
                     break;
             }
+            if(school_pos)
+            {
+                temp2=&(S->school[school_pos]);
+                printf("(%d)%s\n",temp2->number,temp2->school_name);
+                temp->ParticipatingSchool[i]=S->school[school_pos].number;
+            }
+            else
+            {
+                printf("输入有误!\n");
+                choice=0;
+            }
         } while (choice!=1 && choice!=2);
-        temp->ParticipatingSchool[i]=S->school[school_pos].number;
     }
 }
