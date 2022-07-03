@@ -142,7 +142,7 @@ void FindSchool(SportMeeting *S,int school_pos)
                         continue;
                     }
                     if(temp2->carryout) printf("(%d)%s %d\n",i,temp2->project_name,temp->high_standings[i]);
-                    else printf("(%d)%s还未开始\n",i,temp2->project_name);   
+                    else printf("(%d)%s还未开始\n",i,temp2->project_name);
                 }
             }
                 break;
@@ -175,7 +175,7 @@ void FindSchool(SportMeeting *S,int school_pos)
                             {
                                 temp2=&(S->project[project_pos]);
                                 if(!temp2->carryout) printf("(%d)%s还没有进行\n",project_pos,temp2->project_name);
-                                else printf("%s在(%d)%s中获得%d积分\n",temp->school_name,project_pos,temp2->project_name,temp->high_standings[project_pos]);
+                                else printf("(%d)%s在(%d)%s中获得%d积分\n",temp->number,temp->school_name,project_pos,temp2->project_name,temp->high_standings[project_pos]);
                             }
                             else
                             {
@@ -190,7 +190,7 @@ void FindSchool(SportMeeting *S,int school_pos)
                             {
                                 temp2=&(S->project[project_pos]);
                                 if(!temp2->carryout) printf("(%d)%s还没有进行\n",project_pos,temp2->project_name);
-                                else printf("%s在(%d)%s中获得%d积分\n",temp->school_name,project_pos,temp2->project_name,temp->high_standings[project_pos]);
+                                else printf("(%d)%s在(%d)%s中获得%d积分\n",temp->number,temp->school_name,project_pos,temp2->project_name,temp->high_standings[project_pos]);
                             }
                             else
                             {
